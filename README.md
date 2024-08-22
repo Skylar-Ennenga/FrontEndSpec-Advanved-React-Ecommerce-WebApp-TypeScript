@@ -6,9 +6,9 @@ This project is an advanced frontend application for an e-commerce platform, bui
 
 ## Prerequisites
 
-To fully utilize this frontend application, you will need to clone and set up the backend API from the following repository: [BackEndCore Advanced Flask API](https://github.com/Skylar-Ennenga/BackEndCore-Advanced-Flask-API.git).
+The backend API for this project has been deployed on Render to see the backend API code go to: [BackEndCore Advanced Flask API](https://github.com/Skylar-Ennenga/BackEndCore-Advanced-Flask-API.git). Please note that changes were made to improve the deletion of nested resources, ensuring smooth functionality across the application.
 
-A list of changes is listed on this REPO. Changing how to delete nested resources was required to get everything working smoothly. 
+The frontend application has been deployed on Vercel and can be fully utilized at the following URL: [Advanced React E-Commerce Web App](https://front-end-spec-advanved-react-ecommerce-web-app-type-script.vercel.app/).
 
 ## Features
 
@@ -21,7 +21,7 @@ A list of changes is listed on this REPO. Changing how to delete nested resource
   - Store essential user data (`name`, `id`, `loggedIn` status) using `sessionStorage` and `localStorage` to persist across sessions.
 
 - **Order Management**:
-  - by Checking out you add an order to the customer that is logged in.
+  - Checking out adds an order to the currently logged-in customer.
   - Integration with Redux to manage the state of orders within the application.
 
 - **Shopping Cart**:
@@ -42,7 +42,6 @@ A list of changes is listed on this REPO. Changing how to delete nested resource
 - **Axios**: For making HTTP requests to the backend API.
 - **React Router**: For managing navigation within the application.
 - **Session Storage & Local Storage**: For persisting user data and cart state across sessions.
-
 
 ## Usage
 
@@ -65,3 +64,4 @@ A list of changes is listed on this REPO. Changing how to delete nested resource
 
 - The application utilizes React Router for smooth navigation between different sections.
 - Redux handles the complex state management of the application, particularly for user data and the shopping cart.
+

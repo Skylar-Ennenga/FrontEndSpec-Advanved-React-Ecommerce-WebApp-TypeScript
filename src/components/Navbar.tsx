@@ -45,7 +45,7 @@ function NavigationBar() {
             E-Commerce
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link onClick={() => navigate("/cart", { replace: true })}>Home</Nav.Link>
+            <Nav.Link onClick={() => navigate("/", { replace: true })}>Home</Nav.Link>
             <Nav.Link onClick={() => navigate("/products", { replace: true })}>Products</Nav.Link>
           </Nav>
           <Navbar.Toggle aria-controls="navbar-nav" />
