@@ -29,7 +29,7 @@ const Orders = () => {
   // Set the orders
   const fetchOrders = async () => {
     try {
-      const response = await axios.get<Order[]>("http://127.0.0.1:5000/orders");
+      const response = await axios.get<Order[]>("https://backendcore-advanced-flask-api-pilm.onrender.com/orders");
       setOrders(response.data);
       console.log("Orders fetched:", response.data);
     } catch (error) {

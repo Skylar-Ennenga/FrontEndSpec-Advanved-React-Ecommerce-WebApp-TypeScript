@@ -14,7 +14,7 @@ const useVerifyUserNew = () => {
       // if authenticated and we have user data get the customer list and compare the email
       if (isAuthenticated && user) {
         try {
-          const response = await axios.get("http://127.0.0.1:5000/customers");
+          const response = await axios.get("https://backendcore-advanced-flask-api-pilm.onrender.com/customers");
           const customer = response.data.find(
             (customer: Customer) => customer.email === user.email
           );
@@ -30,7 +30,7 @@ const useVerifyUserNew = () => {
           } else {
             // if not create a new customer with the information provided by the authentication data
             const newCustomerResponse = await axios.post(
-              "http://127.0.0.1:5000/customers",
+              "https://backendcore-advanced-flask-api-pilm.onrender.com/customers",
               {
                 name: user.name || "",
                 email: user.email || "",

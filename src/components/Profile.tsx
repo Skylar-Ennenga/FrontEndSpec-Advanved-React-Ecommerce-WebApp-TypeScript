@@ -41,7 +41,7 @@ const Profile = () => {
   // fetch the data and set it t the customer state for later use
   const fetchCustomer = async (id: string): Promise<void> => {
     try {
-      const response = await axios.get<Customer>(`http://127.0.0.1:5000/customers/${id}`);
+      const response = await axios.get<Customer>(`https://backendcore-advanced-flask-api-pilm.onrender.com/customers/${id}`);
       setCustomer(response.data);
     } catch (error) {
       console.log("Error fetching Customer:", error);
@@ -58,7 +58,7 @@ const Profile = () => {
 
     try {
       const response = await axios.put<Customer>(
-        `http://127.0.0.1:5000/customers/${databaseuser.customer_id}`,
+        `https://backendcore-advanced-flask-api-pilm.onrender.com/customers/${databaseuser.customer_id}`,
         {
           name: customerName,
           email: customerEmail,
@@ -81,7 +81,7 @@ const Profile = () => {
     const confirmed = window.confirm("Are you sure you want to delete this customer?");
     if (!confirmed) return;
     try {
-      await axios.delete(`http://127.0.0.1:5000/customers/${customer_id}`);
+      await axios.delete(`https://backendcore-advanced-flask-api-pilm.onrender.com/customers/${customer_id}`);
       console.log(`Customer ${customer_id} deleted successfully`);
       sessionStorage.clear();
       setDatabaseUser({

@@ -13,7 +13,7 @@ export const useGetProducts = () => {
     setError(null);
 
     try {
-      const response = await axios.get<Product[]>('http://127.0.0.1:5000/products');
+      const response = await axios.get<Product[]>('https://backendcore-advanced-flask-api-pilm.onrender.com/products');
       setProducts(response.data);
     } catch (error: any) {
       setError("Error fetching products");
